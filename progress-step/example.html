@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="https://raw.github.com/praveen262k/progress-step/master/src/progress-step.css">
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="https://raw.github.com/praveen262k/progress-step/master/src/progress-step.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function() {
+				progressStepsWidget.initialize("progressbar",
+                	["Authenticating", "Loading Profile", "Synchronizing", "Loading home screen"]);
+        		progressStepsWidget.start();
+
+        		setInterval(function() {
+		            progressStepsWidget.moveNext();
+		            //progressSteps.setError();
+
+		        }, 3000);
+		        
+			});
+		</script>		
+	</head>
+	<body>
+		<ul id="progressbar"></ul>		
+	</body>
+</html>
